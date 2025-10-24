@@ -6,23 +6,18 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:40:10 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/21 17:41:11 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:12:55 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;
 	size_t	i;
 
-	len = 0;
-	while (src[len])
-	{
-		len++;
-	}
+	len = ft_strlen(src);
 	if (size != 0)
 	{
 		i = 0;
@@ -35,14 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (len);
 }
-
-// int	main(void)
-// {
-// 	char	d[] = "cat";
-// 	char	dst[] = "cat";
-// 	char	s[] = "lorem ipsum dolor sit amet";
-// 	size_t	size = 5;
-
-// 	printf("%zu, %s\n", ft_strlcpy(d, s, size), d);
-// 	printf("%zu, %s\n", strlcpy(dst, s, size), dst);
-// }

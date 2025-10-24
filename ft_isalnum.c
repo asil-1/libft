@@ -6,11 +6,11 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:36:59 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/21 17:26:18 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:26:02 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -20,8 +20,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	printf("%d", ft_isalnum('!'));
-// }

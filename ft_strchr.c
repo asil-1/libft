@@ -6,12 +6,11 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 10:28:54 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/22 12:19:22 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:26:23 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -23,13 +22,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	const char	s[] = "teste";
-// 	int c = '\0';
-
-// 	printf("%p\n", s);
-// 	printf("%p\n", ft_strchr(s, c + 256));
-// 	printf("%p\n", strchr(s, c + 256));
-// }

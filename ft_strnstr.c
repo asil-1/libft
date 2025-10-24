@@ -6,12 +6,10 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:59:11 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/23 16:33:30 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:20:06 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -33,14 +31,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	char	big[] = "";
-// 	char	little[] = "yewufw";
-// 	size_t	len = 2;
-
-// 	printf("%zu\n", len);
-// 	printf("%s\n", ft_strnstr(big, little, len));
-// 	printf("%s\n", strnstr(big, little, len));
-// }

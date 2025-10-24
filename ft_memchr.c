@@ -6,12 +6,11 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:39:13 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/23 10:44:44 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:08:37 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -26,13 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	const char	s[] = "crayon de bois";
-// 	int	c = 'a';
-// 	size_t	n = 0;
-// 	printf("%s\n", (unsigned const char *)ft_memchr(s, c, n));
-// 	printf("%s\n", (unsigned const char *)memchr(s, c, n));
-// 	return (0);
-// }
