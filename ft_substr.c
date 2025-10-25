@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 13:46:59 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/24 18:10:39 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/25 18:04:24 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	check = ft_strlen(s);
 	if (check - start > 0 && check - start < len)
 		len = check - start;
-	if (start > check)
+	if (start >= check)
 		len = 0;
 	substr = malloc(sizeof(char) * (len + 1));
 	if (substr == NULL)
@@ -42,8 +42,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int	main(void)
 // {
-// 	char	s[] = "tripouille";
-// 	unsigned int	strat = 100;
+// 	char	s[] = "";
+// 	unsigned int	strat = 0;
 // 	size_t len = 1;
 // 	char	*result;
 
