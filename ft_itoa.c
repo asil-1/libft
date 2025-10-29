@@ -6,11 +6,10 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:10:04 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/29 20:40:09 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/29 20:44:40 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	digit_len(int n)
