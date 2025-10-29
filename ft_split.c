@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 18:28:27 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/29 15:37:15 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:47:55 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ size_t	ft_count_word(char *s, char sep)
 	}
 	return (word);
 }
-
-// int	main(void)
 
 size_t	ft_leni(char const *s, char c)
 {
@@ -128,7 +126,7 @@ char	**ft_split(char const *s, char c)
 // int	main(void)
 // {
 // 	char	**print;
-// 	char	*s = "hello! bonjour" ;
+// 	char	*s = "" ;
 // 	char	sep = ' ';
 // 	size_t	nb_words;
 // 	size_t	i = 0;
