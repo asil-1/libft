@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 13:44:46 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/25 15:04:31 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:44:58 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (*s)
 		s++;
 	while (s != stock && !(*s == (char)c))
-	{
 		s--;
-	}
 	if (*s == (char)c)
 		return ((char *)s);
 	return (NULL);

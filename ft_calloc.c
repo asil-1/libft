@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:22:49 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/30 11:21:17 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:41:15 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!result)
 		return (NULL);
 	ft_bzero(result, nmemb * size);
-	result (result);
+	return (result);
 }

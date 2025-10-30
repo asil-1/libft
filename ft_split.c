@@ -6,14 +6,14 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 18:28:27 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/29 15:47:55 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:43:08 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-size_t	ft_count_word(char *s, char sep)
+static size_t	ft_count_word(char *s, char sep)
 {
 	size_t	i;
 	size_t	word;
@@ -36,15 +36,13 @@ size_t	ft_count_word(char *s, char sep)
 	return (word);
 }
 
-size_t	ft_leni(char const *s, char c)
+static size_t	ft_leni(char const *s, char c)
 {
 	size_t	i;
 
 	i = 0;
 	while (s[i] == c)
-	{
 		i++;
-	}
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -54,7 +52,7 @@ size_t	ft_leni(char const *s, char c)
 	return (i);
 }
 
-void	ft_free(char **new, size_t n)
+static void	ft_free(char **new, size_t n)
 {
 	size_t	i;
 
@@ -67,7 +65,7 @@ void	ft_free(char **new, size_t n)
 	free(new);
 }
 
-char	*ft_strange(char const *s, char c, char *new)
+static char	*ft_strange(char const *s, char c, char *new)
 {
 	size_t	i;
 	size_t	start;
@@ -89,8 +87,6 @@ char	*ft_strange(char const *s, char c, char *new)
 		i++;
 	}
 	new = ft_substr(s, start, len);
-	if (!new)
-		return (NULL);
 	return (new);
 }
 
