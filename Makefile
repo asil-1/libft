@@ -41,6 +41,10 @@ SRC= ft_isalpha.c \
 
 OBJ= $(SRC:.c=.o)
 
+SRC_BONUS= ft_lstnew_bonus.c
+
+OBJ_BONUS= $(SRC_BONUS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -48,6 +52,9 @@ $(NAME): $(OBJ)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
+
+bonus: all $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ_BONUS)
 
 clean:
 	rm -rf $(OBJ)

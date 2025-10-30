@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 12:04:52 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/30 18:08:16 by ldepenne         ###   ########.fr       */
+/*   Created: 2025/10/30 19:03:16 by ldepenne          #+#    #+#             */
+/*   Updated: 2025/10/30 19:51:00 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	len;
-	size_t	i;
-	size_t	j;
+	t_list	*newlist;
 
-	i = 0;
-	j = 0;
-	j = ft_strlen(dst);
-	len = ft_strlen(src);
-	if (size <= j)
-		return (size + len);
-	while (src[i] && (j + i + 1) < size)
-	{
-		dst[j + i] = src[i];
-		i++;
-	}
-	dst[j + i] = '\0';
-	return (len + j);
+	newlist = malloc(sizeof(t_list));
+	if (!newlist)
+		return(NULL);
+	newlist->content = content;
+	newlist->next = NULL;
+	return (newlist);
+}
+#include <stdio.h>
+int	main(void)
+{
+	char	*a = "raccoon";
+	char	*b = "renard";
+	t_list	*node;
+	t_list	*nodeux;
+
+	node = ft_lstnew(a);
+	nodeux = ft_lstnew(b);
+	node->next = nodeux;
+	printf("%s\n", (char *)node->next->content);
 }
