@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:22:49 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/24 12:04:25 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:21:17 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	*calloc;
+	int	*result;
 
-	calloc = malloc(nmemb * size);
-	if (calloc == NULL)
+	if (size <= 0 || nmemb <= 0 || (size * nmemb) <= 0)
 		return (NULL);
-	if (nmemb == 0 || size == 0)
-		return (calloc);
-	ft_bzero(calloc, nmemb * size);
-	return (calloc);
+	result = malloc(nmemb * size);
+	if (!result)
+		return (NULL);
+	ft_bzero(result, nmemb * size);
+	result (result);
 }
