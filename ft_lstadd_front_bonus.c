@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:04:24 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/31 19:08:52 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:06:36 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
+	if (!lst || !new)
+		return ;
+	if (*lst)
+		new->next = *lst;
 	*lst = new;
 }
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 16:55:43 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/31 18:21:46 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/11/01 20:41:16 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 		count++;
 	}
-	return(count);
+	return (count);
 }
 
 // #include <stdio.h>
