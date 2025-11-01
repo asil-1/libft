@@ -41,7 +41,12 @@ SRC= ft_isalpha.c \
 
 OBJ= $(SRC:.c=.o)
 
-SRC_BONUS= ft_lstnew_bonus.c
+SRC_BONUS= ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstadd_back_bonus.c \
+	ft_lstdelone_bonus.c
 
 OBJ_BONUS= $(SRC_BONUS:.c=.o)
 
@@ -57,7 +62,7 @@ bonus: all $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ_BONUS)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm -rf $(NAME)

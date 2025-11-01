@@ -1,47 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 19:03:16 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/31 18:21:57 by ldepenne         ###   ########.fr       */
+/*   Created: 2025/10/31 11:04:24 by ldepenne          #+#    #+#             */
+/*   Updated: 2025/10/31 19:08:52 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*newlist;
-
-	newlist = malloc(sizeof(t_list));
-	if (!newlist)
-		return(NULL);
-	newlist->content = content;
-	newlist->next = NULL;
-	return (newlist);
+	new->next = *lst;
+	*lst = new;
 }
-
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char	*a = "raccoon";
-// 	char	*b = "renard";
+// 	t_list	*node1;
+// 	t_list	*node2;
+// 	t_list	*node3;
+// 	t_list	*node4;
 // 	t_list	*tmp;
-// 	t_list	*node;
-// 	t_list	*nodeux;
+// 	t_list	*tmp2;
+// 	char	*a = "le";
+// 	char	*b = "caca";
+// 	char	*c = "est";
+// 	char	*d = "cuit";
 
-// 	node = ft_lstnew(a);
-// 	nodeux = ft_lstnew(b);
-// 	node->next = nodeux;
-// 	tmp = node;
+// 	node1 = ft_lstnew(a);
+// 	node2 = ft_lstnew(b);
+// 	node3 = ft_lstnew(c);
+// 	node4 = ft_lstnew(d);
+// 	ft_lstadd_front(&node4, node3);
+// 	ft_lstadd_front(&node3, node2);
+// 	ft_lstadd_front(&node2, node1);
+
+// 	tmp = node1;
 // 	while (tmp)
 // 	{
 // 		printf("%s\n", (char *)tmp->content);
+// 		tmp2 = tmp;
 // 		tmp = tmp->next;
+// 		free(tmp2);
 // 	}
-// 	free(node);
-// 	free(nodeux);
 // }

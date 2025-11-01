@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:10:04 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/29 20:44:40 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/10/31 12:18:53 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	reverse_str(char *s, int i, int sign)
 	s[i] = '\0';
 }
 
-static char	*convert_number(int n, char *s)
+static char	*convert_number(int n, char *str)
 {
 	int	sign;
 	int	nb;
@@ -71,37 +71,38 @@ static char	*convert_number(int n, char *s)
 	while (n > 0)
 	{
 		nb = n % 10;
-		s[i] = nb + '0';
+		str[i] = nb + '0';
 		n = n / 10;
 		i++;
 	}
-	reverse_str(s, i, sign);
-	return (s);
+	reverse_str(str, i, sign);
+	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*s;
+	char	*str;
 	int		i;
 
 	i = 0;
 	if (n == 0)
 	{
-		s = ft_strdup("0");
-		return (s);
+		str = ft_strdup("0");
+		return (str);
 	}
 	if (n == -2147483648)
 	{
-		s = ft_strdup("-2147483648");
-		return (s);
+		str = ft_strdup("-2147483648");
+		return (str);
 	}
-	s = malloc(sizeof(*s) * (digit_len(n) + 1));
-	if (!s)
+	str = malloc(sizeof(char) * (digit_len(n) + 1));
+	if (!str)
 		return (NULL);
-	s = convert_number(n, s);
-	return (s);
+	str = convert_number(n, str);
+	return (str);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	char	*print;
