@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 18:28:27 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/31 11:50:02 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/12/02 18:14:03 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,15 +122,13 @@ char	**ft_split(char const *s, char c)
 // int	main(void)
 // {
 // 	char	**print;
-// 	char	*s = "" ;
+// 	char	*s = "les feuilles tombent de l'arbre";
 // 	char	sep = ' ';
 // 	size_t	nb_words;
 // 	size_t	i = 0;
 
 // 	nb_words = ft_count_word(s, sep);
 // 	print = ft_split(s, sep);
-// 	// if (!print)
-// 	// 	return (NULL);
 // 	while (print[i])
 // 	{
 // 		printf("%s\n", print[i]);

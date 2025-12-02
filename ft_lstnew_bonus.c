@@ -6,12 +6,14 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 19:03:16 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/11/01 20:40:59 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/11/04 11:30:23 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
+//la modif en newnode
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*newnode;

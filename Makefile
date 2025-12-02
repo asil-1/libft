@@ -4,6 +4,8 @@ HEADER=libft.h
 
 NAME=libft.a
 
+BUILD_DIR=obj/
+
 SRC= ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -39,7 +41,8 @@ SRC= ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
-OBJ= $(SRC:.c=.o)
+OBJ= $(SRC:%.c=$(BUILD_DIR)%.o)
+OBJ_DIR= $(sort $(shell dirname $(OBJ)))
 
 SRC_BONUS= ft_lstnew_bonus.c \
 	ft_lstadd_front_bonus.c \
@@ -51,25 +54,29 @@ SRC_BONUS= ft_lstnew_bonus.c \
 	ft_lstiter_bonus.c \
 	ft_lstmap_bonus.c
 
-OBJ_BONUS= $(SRC_BONUS:.c=.o)
+OBJ_BONUS= $(SRC_BONUS:%.c=$(BUILD_DIR)%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o: %.c
+$(BUILD_DIR)%.o: %.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
 
-bonus: all $(OBJ_BONUS)
+bonus: $(NAME) $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ_BONUS)
+	touch bonus
+
+$(OBJ_DIR):
+	@mkdir -p $@
 
 clean:
-	rm -rf $(OBJ) $(OBJ_BONUS)
+	rm -rf $(BUILD_DIR) bonus
 
 fclean: clean
 	rm -rf $(NAME)
 
-re : fclean all
+re: fclean all
 
 .PHONY: all clean fclean re

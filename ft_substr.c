@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 13:46:59 by ldepenne          #+#    #+#             */
-/*   Updated: 2025/10/25 18:04:24 by ldepenne         ###   ########.fr       */
+/*   Updated: 2025/11/14 14:16:18 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	j;
 	size_t	check;
-	char	*substr;
+	char	*result;
 
 	if (s == NULL)
 		return (NULL);
@@ -26,18 +26,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = check - start;
 	if (start >= check)
 		len = 0;
-	substr = malloc(sizeof(char) * (len + 1));
-	if (substr == NULL)
+	result = malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
 		return (NULL);
 	j = 0;
 	while (j < len)
 	{
-		substr[j] = s[start];
+		result[j] = s[start];
 		start++;
 		j++;
 	}
-	substr[j] = '\0';
-	return (substr);
+	result[j] = '\0';
+	return (result);
 }
 
 // int	main(void)
